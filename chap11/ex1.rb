@@ -5,7 +5,7 @@
 # return and Napoleon had a baby—it kills your program right where it stands;
 # this is good for spitting out an error message and then quitting).
 
-Dir.chdir 'C:/Users/User/Pictures/clonephone' # changes thge working directory, originally its the dir where the .rb file resides
+Dir.chdir 'C:/Users/User/Pictures/clonephone' # changes the working directory, originally its the dir where the .rb file resides
 
 pic_names = Dir['C:/Users/User/Pictures/Phone Wallpaper/*.jpg'] # dir from where we want to copy files
 
