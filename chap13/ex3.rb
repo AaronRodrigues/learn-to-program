@@ -115,7 +115,7 @@ class Dragon
 	end
 end
 
-puts "You find a baby Dargon at your doorstep. What do you want to name him?"
+puts "You find a baby Dragon at your doorstep. What do you want to name him?"
 name = gets.chomp
 pet = Dragon.new name
 			while true
