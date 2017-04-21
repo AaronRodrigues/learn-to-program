@@ -25,6 +25,7 @@ class OrangeTree
 	def oneYearPasses
 		@height += 3
 		@years +=  1
+		@orangeCount = 0
 	end
 
 	def countTheOranges
