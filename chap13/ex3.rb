@@ -12,7 +12,6 @@ class Dragon
 		@asleep = false
 		@stuffInBelly 		= 10
 		@stuffInIntestine 	=  0
-		@you = true
 		puts @name + ' is born.'
 
 	end
@@ -91,7 +90,6 @@ class Dragon
 				puts 'He wakes up suddenly!'
 			end
 			puts @name + ' is starving! In desperation, he ate YOU!'
-			@you = false
 			exit
 	end
 
@@ -117,12 +115,16 @@ class Dragon
 	end
 end
 
-pet = Dragon.new 'Donky'
-			while (@you = true)
+puts "You find a baby Dargon at your doorstep. What do you want to name him?"
+name = gets.chomp
+pet = Dragon.new name
+			while true
 				puts "What do you want the dragon to do ? "
-				puts "Enter feed, toss, walk, bed or rock"
+				puts "Enter exit, feed, toss, walk, bed or rock"
 				action = gets.chomp
 				case action
+					when "exit"
+					pet.exit
 					when "feed" 
 						pet.feed
 					when "toss"
@@ -131,22 +133,10 @@ pet = Dragon.new 'Donky'
 						pet.walk
 					when "rock"
 						pet.rock
-					else "bed"
-						pet.putToBed
+					when "bed"
+					pet.putToBed
+				else
+					puts "Whats that again?"
 				end
 			end
-# pet.feed
-# pet.toss
-# pet.walk
-# pet.putToBed
-# pet.rock
-# pet.putToBed
-# pet.rock
-# pet.putToBed
-# pet.putToBed
-# pet.putToBed
-# pet.putToBed
-
-
-
 end
